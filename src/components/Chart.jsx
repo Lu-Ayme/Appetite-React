@@ -18,16 +18,16 @@ function Chart() {
 		}]
 	)
 
-componentDidMount=useState(() => {
+{/*componentDidMount=useState(() => {
 		fetch('http://localhost:3030/api/products')
 			.then((res) => {
 				return (res.json())
 			})
 			.then((data) => {
-				console.log(data)
+				console.log(data.products)
 			})
 	}, [])
-
+*/}
 
   {/*const [listMovies, setlistMovies] = useState([]);
   useEffect(() => {
@@ -58,11 +58,11 @@ componentDidMount=useState(() => {
               </tr>
             </thead>
             <tbody>
-              {
-                listMovies.map((row, i) => {
+              
+              {/*{ listMovies.map((row, i) => {
                   return <ChartRow {...row} key={i} />
-                })
-              }
+                })}*/}  
+              
 
             </tbody>
           </table>

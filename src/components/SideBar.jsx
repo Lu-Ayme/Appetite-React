@@ -51,7 +51,7 @@ function SideBar() {
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-table" />
             <span>
-              <Link to='/tables'>Tables</Link>
+              <Link to='/Tabla'>Tabla</Link>
             </span>
 
           </a>

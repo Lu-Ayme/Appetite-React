@@ -2,7 +2,7 @@ import './assets/css/app.css'
 
 import SideBar from './components/SideBar'
 import ContentWrapper from './components/ContentWrapper'
-import ContentRowMovies from "./components/ContentRowMovies";
+import Chart from "./components/Chart";
 import SearchMovies from './components/SearchMovies';
 import CajadeCombos from './components/CajadeCombos';
 import Categorias from './components/Categorías';
@@ -21,7 +21,7 @@ function App() {
           <Route path='/' element={<ContentWrapper />} />
          {/*<Route path='/Presentación' element={<Presentacion />} />*/}
           <Route path='/CajadeCombos' element={<CajadeCombos />} />
-          <Route path='/tables' element={<ContentRowMovies />} />
+          <Route path='/Tabla' element={<Chart />} />
           <Route path='/Categorias' element={<Categorias />} />
           <Route path='/search' element={<SearchMovies />} />
           <Route element={<Error404 />} />
