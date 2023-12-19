@@ -29,17 +29,15 @@ function Chart() {
 	}, [])
 */}
 
-  {/*const [listMovies, setlistMovies] = useState([]);
+  const [listMovies, setlistMovies] = useState([]);
   useEffect(() => {
     const traedata = async () => {
       const response = await fetch('http://localhost:3030/api/products')
       const data = await response.json()
-      setlistMovies(data.data)
+      setlistMovies(data.product)
     }
     traedata()
   }, []);
-*/}
-
 
 
 
@@ -59,9 +57,9 @@ function Chart() {
             </thead>
             <tbody>
               
-              {/*{ listMovies.map((row, i) => {
+              { listMovies.map((row, i) => {
                   return <ChartRow {...row} key={i} />
-                })}*/}  
+                })}  
               
 
             </tbody>

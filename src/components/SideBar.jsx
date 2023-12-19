@@ -60,6 +60,15 @@ function SideBar() {
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-table" />
             <span>
+              <Link to='/Tabla'>Tabla</Link>
+            </span>
+
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/">
+            <i className="fas fa-fw fa-table" />
+            <span>
               {/*<Link to='/search'>Search</Link>*/}
             </span>
 

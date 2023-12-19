@@ -23,9 +23,9 @@ let totalAwards = {
 /* <!-- Actors quantity --> */
 
 let actorsQuantity = {
-    title:'Puntuación' ,
+    title:'Total de categorías' ,
     color:'warning',
-    cuantity:'★★★★★',
+    cuantity:'5',
     icon:'fa-user-check'
 }
 

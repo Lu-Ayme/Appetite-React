@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import '../assets/css/app.css'
 
+import { useEffect, useState } from 'react'
+
+
 function Categorias() {
+
+
+
   return (
     <React.Fragment>
       <div className="col-lg-6 mb-4">
@@ -49,6 +55,27 @@ function Categorias() {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-6 mb-4">
+        <div className="card shadow mb-4">
+          <div className="card-header py-3">
+            <h6 className="m-0 font-weight-bold text-gray-800">
+              Categorías
+            </h6>
+          </div>
+          <div className="card-body">
+            <div className="row">
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Pizzas
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
