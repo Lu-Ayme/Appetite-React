@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 
 function ChartRow(props) {
     return (
-        <tr>
+        <tr> 
             <td>{props.id}</td>
             <td>{props.name}</td>
             <td>{props.description}</td>
             <td>{props.categories}</td>
-            <td>
-                <ul>
-                  {/*<li>{props.categories?.name || 'No tiene categoría' }</li> */}  
-                </ul>
-            </td>
         </tr>
     )
 }

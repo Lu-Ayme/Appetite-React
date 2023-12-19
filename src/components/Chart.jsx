@@ -5,19 +5,6 @@ import { useEffect, useState } from 'react'
 
 function Chart() {
 
-  const [movies, setMovies] = React.useState(
-		[{
-			"Title": "Parchís",
-			"Year": "1983",
-			"Poster": "https://m.media-amazon.com/images/M/MV5BYTgxNjg2MTAtYjhmYS00NjQwLTk1YTMtNmZmOTMyNTAwZWUwXkEyXkFqcGdeQXVyMTY5MDE5NA@@._V1_SX300.jpg"
-		},
-		{
-			"Title": "Brigada en acción",
-			"Year": "1977",
-			"Poster": "N/A"
-		}]
-	)
-
 {/*componentDidMount=useState(() => {
 		fetch('http://localhost:3030/api/products')
 			.then((res) => {

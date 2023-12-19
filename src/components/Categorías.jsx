@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import '../assets/css/app.css'
 
 import { useEffect, useState } from 'react'
@@ -6,8 +6,15 @@ import { useEffect, useState } from 'react'
 
 function Categorias() {
 
-
-
+  const [listMovies, setlistMovies] = useState([]);
+  useEffect(() => {
+    const traedata = async () => {
+      const response = await fetch('http://localhost:3030/api/products')
+      const data = await response.json()
+      setlistMovies(data.countByCategory)
+    }
+    traedata()
+  }, []);
   return (
     <React.Fragment>
       <div className="col-lg-6 mb-4">
@@ -43,7 +50,7 @@ function Categorias() {
               <div class="col-lg-6 mb-4">
                 <div class="card bg-dark text-white shadow">
                   <div class="card-body">
-                    Sancks
+                    Snacks
                   </div>
                 </div>
               </div>
@@ -54,7 +61,6 @@ function Categorias() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -64,15 +70,24 @@ function Categorias() {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h6 className="m-0 font-weight-bold text-gray-800">
-              Categorías
+              Vendidos por categoría
             </h6>
           </div>
           <div className="card-body">
             <div className="row">
-              <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-4">
                 <div class="card bg-dark text-white shadow">
                   <div class="card-body">
-                    Pizzas
+                    Pizzas: {listMovies.pizzas}
+                    <br />
+                    Hamburguesas: {listMovies.hamburguesas}
+                    <br />
+                    Snacks: {listMovies.acompañamientos}
+                    <br />
+                    Panchos: {listMovies.panchos}
+                    <br />
+                    Bebidas: {listMovies.bebidas}
+
                   </div>
                 </div>
               </div>
@@ -85,55 +100,3 @@ function Categorias() {
 }
 
 export default Categorias
-
-{/*<div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Acción</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Animación</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Aventura</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Ciencia Ficción</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Comedia</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Documental</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Drama</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Fantasia</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Infantiles</div>
-                </div>
-              </div>
-              <div className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
-                  <div className="card-body">Musical</div>
-                </div>
-              </div>
-</div>*/}
