@@ -25,7 +25,7 @@ function SideBar() {
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-tachometer-alt" />
             <span>
-              <Link to='/'>Dashboard - DH movies</Link>
+              <Link to='/'>Dashboard - Appetite</Link>
             </span>
           </a>
         </li>
@@ -35,7 +35,7 @@ function SideBar() {
           <a className="nav-link collapsed" href="/">
             <i className="fas fa-fw fa-folder" />
             <span>
-              <Link to='/genresInDB'>Genres</Link>
+              <Link to='/Categorias'>Categorías</Link>
             </span>
           </a>
         </li>
@@ -43,7 +43,7 @@ function SideBar() {
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-chart-area" />
             <span>
-              <Link to='/lastMovieInDB'>Last movie in DB</Link>
+              <Link to='/CajadeCombos'>Probalo!!!</Link>
             </span>
           </a>
         </li>
@@ -60,7 +60,7 @@ function SideBar() {
           <a className="nav-link" href="/">
             <i className="fas fa-fw fa-table" />
             <span>
-              <Link to='/search'>Search</Link>
+              {/*<Link to='/search'>Search</Link>*/}
             </span>
 
           </a>

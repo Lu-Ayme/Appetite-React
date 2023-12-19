@@ -4,8 +4,9 @@ import SideBar from './components/SideBar'
 import ContentWrapper from './components/ContentWrapper'
 import ContentRowMovies from "./components/ContentRowMovies";
 import SearchMovies from './components/SearchMovies';
-import LastMovieInDB from './components/LastMovieInDb';
-import GenresInDb from './components/GenresInDb';
+import CajadeCombos from './components/CajadeCombos';
+import Categorias from './components/Categorías';
+import Presentacion from './components/Presentacion'
 import Error404 from './components/Error404'
 
 import { Routes, Route } from 'react-router-dom'
@@ -18,9 +19,10 @@ function App() {
 
         <Routes>
           <Route path='/' element={<ContentWrapper />} />
-          <Route path='/lastMovieInDB' element={<LastMovieInDB />} />
+         {/*<Route path='/Presentación' element={<Presentacion />} />*/}
+          <Route path='/CajadeCombos' element={<CajadeCombos />} />
           <Route path='/tables' element={<ContentRowMovies />} />
-          <Route path='/genresInDb' element={<GenresInDb />} />
+          <Route path='/Categorias' element={<Categorias />} />
           <Route path='/search' element={<SearchMovies />} />
           <Route element={<Error404 />} />
         </Routes>

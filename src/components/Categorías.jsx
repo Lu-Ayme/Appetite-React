@@ -1,61 +1,63 @@
 import React, { Component } from "react";
-import Genre from "./Genre";
 import '../assets/css/app.css'
-// import { useEffect, useState } from 'react'
 
-class GenresInDb extends Component {
-
-  constructor() {
-    super()
-    this.state = {
-      genresList: []
-    }
-  }
-
-
-  componentDidMount() {
-    fetch('http://localhost:3001/api/genres')
-    .then(res => res.json())
-      .then(genres => {
-        this.setState({ genresList: genres.data })
-      })
-  };
-
-  cambiarColor() {
-    let parte = document.querySelector('h6')
-    parte.classList.toggle(bg - secondary)
-  }
-
-
-  render() {
-    return (
-      <React.Fragment>
-        <div className="col-lg-6 mb-4">
-          <div className="card shadow mb-4">
-            <div className="card-header py-3">
-              <h6 className="m-0 font-weight-bold text-gray-800">
-                Genres in Data Base
-              </h6>
-            </div>
-            <div className="card-body">
-              <div className="row">
-                {/*{genresList.map(producto => (<li key={producto.id}>{producto.name}</li>))}*/}
-
-
-                {this.state.genresList.map((genre, index) => {
-                  return <Genre {...genre} key={index} />
-                })}
-
+function Categorias() {
+  return (
+    <React.Fragment>
+      <div className="col-lg-6 mb-4">
+        <div className="card shadow mb-4">
+          <div className="card-header py-3">
+            <h6 className="m-0 font-weight-bold text-gray-800">
+              Categorías
+            </h6>
+          </div>
+          <div className="card-body">
+            <div className="row">
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Pizzas
+                  </div>
+                </div>
               </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Hamburguesas
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Bebidas
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Sancks
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card bg-dark text-white shadow">
+                  <div class="card-body">
+                    Panchos
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </React.Fragment>
-    )
-  }
+      </div>
+    </React.Fragment>
+  )
 }
 
-export default GenresInDb
+export default Categorias
 
 {/*<div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">

@@ -5,7 +5,7 @@ import '../assets/css/app.css'
 /* <!-- Movies in DB --> */
 
 let moviesInDB = {
-    title: 'Movies in Data Base',
+    title: 'Nuestros productos',
     color: 'primary', 
     cuantity: 21,
     icon: 'fa-clipboard-list'
@@ -14,7 +14,7 @@ let moviesInDB = {
 /* <!-- Total awards --> */
 
 let totalAwards = {
-    title:' Total awards', 
+    title:'Usuarios registrados', 
     color:'success', 
     cuantity: '79',
     icon:'fa-award'
@@ -23,9 +23,9 @@ let totalAwards = {
 /* <!-- Actors quantity --> */
 
 let actorsQuantity = {
-    title:'Actors quantity' ,
+    title:'Puntuación' ,
     color:'warning',
-    cuantity:'49',
+    cuantity:'★★★★★',
     icon:'fa-user-check'
 }
 

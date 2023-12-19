@@ -4,35 +4,32 @@ import PropTypes from 'prop-types';
 function ChartRow(props) {
     return (
         <tr>
-            <td>{props.title}</td>
-            <td>{props.length}</td>
-            <td>{props.rating}</td>
-
+            <td>{props.id}</td>
+            <td>{props.name}</td>
+            <td>{props.description}</td>
+            <td>{props.categories}</td>
             <td>
                 <ul>
-                    <li>{props.genre?.name || 'No tiene categoría' }</li>
+                  {/*<li>{props.categories?.name || 'No tiene categoría' }</li> */}  
                 </ul>
             </td>
-            <td>{props.awards}</td>
         </tr>
     )
 }
 
 ChartRow.propTypes = {
-    title: PropTypes.string,
-    rating: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-    length: PropTypes.number.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-    awards: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    categories: PropTypes.string
 }
 
 
 ChartRow.defaultProps = {
-    title: 'nada',
-    rating: '0',
-    length: '0',
-    genres: [],
-    awards: '0'
+    id: 'X',
+    name: 'Sin nombre',
+    description: 'Sin descripción',
+    categories: [],
 }
 
 

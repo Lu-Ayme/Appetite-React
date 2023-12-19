@@ -1,7 +1,6 @@
 import React from "react";
 import '../assets/css/app.css'
-import Jordan_img from '../assets/images/jordan-walke.png'
-
+import Logo from '../assets/images/logo.png'
 
 function TopBar() {
   return (
@@ -30,12 +29,12 @@ function TopBar() {
           <li className="nav-item dropdown no-arrow">
             <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
               <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-                Jordan Walke
+                Appetite
               </span>
               <img
                 className="img-profile rounded-circle"
-                src={Jordan_img}
-                alt="Jordan Walke - Creador de React"
+                src={Logo}
+                alt="Appetite :D"
                 width={60}
               />
             </a>

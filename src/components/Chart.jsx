@@ -25,9 +25,8 @@ function Chart() {
   const [listMovies, setlistMovies] = useState([]);
   useEffect(() => {
     const traedata = async () => {
-      const response = await fetch('http://localhost:3001/api/movies')
+      const response = await fetch('http://localhost:3030/api/products')
       const data = await response.json()
-      console.log(data)
       setlistMovies(data.data)
     }
     traedata()
@@ -43,22 +42,12 @@ function Chart() {
           <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
             <thead>
               <tr>
-                <th>Título</th>
-                <th>Duración</th>
-                <th>Rating</th>
-                <th>Género</th>
-                <th>Premios</th>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Categorías</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>Título</th>
-                <th>Duración</th>
-                <th>Rating</th>
-                <th>Género</th>
-                <th>Premios</th>
-              </tr>
-            </tfoot>
             <tbody>
               {
                 listMovies.map((row, i) => {
