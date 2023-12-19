@@ -4,8 +4,8 @@ import Banner from "../assets/images/banner.png"
 function Presentacion() {
     return (
         <>
-            <div className="col-lg-6 mb-4">
-                <div className="card shadow mb-4">
+        <div className="row">
+            <div className="card shadow mb-4">
                     <div className="card-body">
                         <div className="text-center">
                             <img
@@ -20,7 +20,7 @@ function Presentacion() {
                         </p>
                     </div>
                 </div>
-            </div>
+        </div>
         </>
     )
 }

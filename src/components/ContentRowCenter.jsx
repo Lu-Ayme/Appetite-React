@@ -5,9 +5,9 @@ import Categorias from './Categorías';
 function ContentRowCenter() {
     return (
         <>
+                <Presentacion />
 
             <div className="row">
-                <Presentacion />
                 <Categorias />
             </div>
         </>
